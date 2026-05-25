@@ -3,7 +3,7 @@ FROM maven:3.8.5-openjdk-17 AS build
 
 COPY . .
 
-RUN mvn clean package -DskipTests
+RUN ./mvnw clean package -DskipTests
 
 #Step 2: Run the application using a lightweight Java runtime
 
